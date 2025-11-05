@@ -14,4 +14,5 @@ function secuenciaCompleta()
         alert("La secuencia es: " + resultado);
     }
 }
+
 //2 6 12 20
