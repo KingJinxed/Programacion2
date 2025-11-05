@@ -1,17 +1,17 @@
 function validarEdad()
 {
-    nacimiento = parseInt(prompt("Dame tu año de nacimiento"))
-    fecha = parseInt(prompt("En que año vives?"))
-    ope = nacimiento - fecha 
-}
+    let nacimiento = parseInt(prompt("Dame tu año de nacimiento"))
+    let actualYear = parseInt(prompt("En que año vives?"))
 
+    let edad = actualYear - nacimiento;
 
-
-while(nacimiento > 21)
+while(edad < 21)
 {
+    let faltan = 21 - edad;
+    alert("Te faltan " + faltan + " años para entrar");
+
+    actualYear = parseInt(prompt("En que año vives?"));
+    edad = actualYear - nacimiento;
+}
     alert("Bienvenido al sitio");
-    if(nacimiento < 21)
-    {
-        alert("Podras entrar al sitio en " + ope + " años ");
-    }
 }
