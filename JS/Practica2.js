@@ -1,11 +1,12 @@
-function mostrarSaludoConNombre()
-{
-    nom=(prompt("Ingresa tu nombre"))
-    alert("Hola " + nom + " bienvenido a javaScript ");
-}
-
 function mostrarNombreNVeces()
 {
-    nomParsed= parseInt(nom,)
-    alert
+    let nom = prompt("¿Cual es tu nombre?")
+    let numV = parseInt(prompt("¿Cuantas veces quieres que se repita?"))
+    
+    let resultado = "";
+    for( let i=0; i<numV; i++)
+    {
+        resultado += nom + "\n"
+    }
+    alert(resultado)
 }
