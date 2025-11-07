@@ -6,16 +6,15 @@
     <title>Examen</title>
 </head>
 <body>
-    <h2>Requerimientos para examen</h2>
+    <h1>Examen</h1>
 
 <div class="botones">
-    <button>Botón 1</button>
-    <button>Botón 2</button>
-    <button>Botón 3</button>
+    <button onclick="btnUno()">Botón 1</button>
+    <button onclick="btnDos()">Botón 2</button>
+    <button onclick="btnTres()">Botón 3</button>
 </div>
 
 <div class="formulario">
-
     <div>
         <label>Nombre</label>
         <input type="text" id="nombre">
@@ -44,7 +43,7 @@
 
     <div>
         <label>Porcentaje de Beca</label>
-        <input type="text" id="beca">
+        <input type="number" id="beca">
     </div>
 
     <div>
@@ -53,7 +52,8 @@
     </div>
 </div>
 
-<button onclick="enviar()">Enviar</button>
+<button onclick="calcBecaForm()">Enviar</button>
 
 </body>
+<script src="../JS/EXAMEN1.js"></script>
 </html>
