@@ -6,13 +6,14 @@ function usuarioAtendido()
         let moverNombreUsuario = listaDeEspera.unshift(listaUsuariosAtendidos);
 
 
-    for(let i = 0; i <= listaDeEspera.length; i++)
+    for(let i = 1; i <= listaDeEspera.length; i++)
     {
-        if(listaDeEspera)
-        {
-            listaUsuariosAtendidos.push(listaDeEspera[i])
-            let ultimosAtendidos = listaUsuariosAtendidos.slice(10,14);
+       if(listaDeEspera)
+       {
+            alert("Lista de atendidos: " + moverNombreUsuario)
+            listaUsuariosAtendidos.unshift(listaDeEspera[i])
+            let ultimosAtendidos = listaUsuariosAtendidos.slice(10,15)
             alert("Los ultimos 5 usuarios atendidos fueron: " + ultimosAtendidos);
-        }
+       }
     }
 }
