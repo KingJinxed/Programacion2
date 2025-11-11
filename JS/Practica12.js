@@ -1,16 +1,17 @@
 function listaDeEspera()
 {
-    let personasEspera = [Alfonso, Wildesito, Leonardo, Tamayo, Erik, Luis, Obed, victoria, Fernando,Lili, Mich,Oscar,Liam,Hugo,Marco];
-    let nom = prompt("¿Cual es tu nombre?")
+    let personasEspera = ["Alfonso","Wildesito" ,"Leonardo" ,"Tamayo" ,"Erik" ,"Luis" ,"Obed" ,"victoria" ,"Fernando" ,"Lili" ,"Mich" ,"Oscar" ,"Liam" ,"Hugo" ,"Marco"];
+    let nombre = prompt("¿Cuál es tu nombre?");
 
-    let estaEn = true;
-    
-    for(let i = 0; ; i++)
+    // Buscar posición con indexOf
+    let posicion = personasEspera.indexOf(nombre);
+
+    if (posicion !== -1) 
     {
-        if(arregloNum [i] % 2 == 0)
-        {
-            arregloPar.push(arregloNum[i])
-        }
+        alert("Tu posición es: " + (posicion + 1));
+    } 
+    else 
+    {
+        alert("No estás en la lista.");
     }
-    alert("Te encuentras en el lugar: ")
 }
