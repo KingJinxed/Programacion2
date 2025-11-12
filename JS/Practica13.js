@@ -13,7 +13,7 @@ function usuarioAtendido()
         listaUsuariosAtendidos.push(moverNombreUsuario); 
     }
 
-        alert("Usuarios atendidos:\n" + listaUsuariosAtendidos);
+        alert("Usuarios atendidos: " + listaUsuariosAtendidos);
         let ultimosAtendidos = listaUsuariosAtendidos.slice(-5);
-        alert("Los últimos 5 usuarios atendidos fueron:\n" + ultimosAtendidos.join(", "));
+        alert("Los últimos 5 usuarios atendidos fueron: " + ultimosAtendidos);
 }

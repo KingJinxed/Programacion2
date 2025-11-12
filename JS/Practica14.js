@@ -31,6 +31,6 @@ function gruposRevueltos()
     alert
     (
         "Promedio del semestre 1: " + promedio1 +
-        "\nPromedio del semestre 2: " + promedio2
+        "Promedio del semestre 2: " + promedio2
     );
 }
