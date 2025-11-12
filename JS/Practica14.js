@@ -12,4 +12,25 @@ function gruposRevueltos()
         }
         calificaciones.push(cal);
     }
+
+    let suma1 = 0;
+    for (let i = 0; i < 10; i++)
+    {
+        suma1 += calificaciones[i];
+    }
+    let promedio1 = suma1 / 10;
+
+
+    let suma2 = 0;
+    for (let i = 10; i < 20; i++) 
+    {
+        suma2 += calificaciones[i];
+    }
+    let promedio2 = suma2 / 10;
+
+    alert
+    (
+        "Promedio del semestre 1: " + promedio1 +
+        "\nPromedio del semestre 2: " + promedio2
+    );
 }
