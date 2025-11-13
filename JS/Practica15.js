@@ -17,6 +17,6 @@ function registrarDonador()
     for(let j = 0; j < 12; j++)
     {
         let sangre = prompt("Ingresa tu tipo de sangre")
-        while(isNaN(tipoDeSangre) || sangre.includes("O+", "O-", "A+", "B-","AB"))
+        while(isNaN(tipoDeSangre) || sangre.includes("O+", "O-", "A+", "B-","AB"));
     }
 } 
