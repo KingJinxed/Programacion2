@@ -37,7 +37,6 @@ function registrarDonador()
         }
 
         conteoTipos[sangre]++;
-        //nombreDon.push(`Nombre: ${nombre} - Tipo: ${tipo}`);
         nombreDon.push("Nombre: " + nombre, "Tipo: " + sangre);
 
         if (conteoTipos[sangre] === 5) 
