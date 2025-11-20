@@ -1,0 +1,1 @@
+//crear una lista dinamica con estos elementos (azul,verde,amarillo,rosa,cafe,Dorado,negro) con viñetas, utilizando textnode, child
