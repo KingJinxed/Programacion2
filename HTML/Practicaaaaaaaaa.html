@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario WEB básico</title>
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <h2>Formulario WEB básico</h2>
+
+    <form id="formulario">
+        <fieldset>
+            <legend>Información del usuario</legend>
+
+            Nombre: 
+            <input type="text" name="nombre"><br><br>
+
+            Dirección e-mail: 
+            <input type="email" name="email"><br><br>
+
+            Ciudad:
+            <select name="ciudad">
+                <option value="">Selecciona ciudad...</option>
+                <option value="Torreon">Torreón</option>
+                <option value="Gomez">Gómez Palacio</option>
+                <option value="Lerdo">Lerdo</option>
+            </select>
+            <br><br>
+
+            Aficiones:<br>
+            <input type="checkbox" name="hobbies" value="Deportes"> Deportes <br>
+            <input type="checkbox" name="hobbies" value="Coches"> Coches <br>
+            <input type="checkbox" name="hobbies" value="Musica"> Música <br><br>
+
+            <button type="button" onclick="mostrarDatos()">OK</button>
+        </fieldset>
+    </form>
+</body>
+<script src="../JS/Practicaaaaaaaaaaa.js"></script>
+</html>
