@@ -14,7 +14,8 @@ function mostrarPaises()
             mensaje += `<li>${paises[i]}</li>`;
         }
 }
-//Realizar una  funcion que muestre y cree una lista ordenada en html de los paises
+//Realizar una  funcion que muestre y cree una lista ordenada en html de los paises utilizando appendchild
     mensaje += "</ol>";
-    document.getElementById("listaPaises").innerHTML = mensaje;
+    document.createElement("div").innerHTML = mensaje;
+    document.body.innerHTML += mensaje;
 }
