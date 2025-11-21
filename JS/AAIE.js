@@ -9,6 +9,7 @@ function divDinamicos()
 
     //El padre sera solo un DIV de colo negro
     const divPadre = document.createElement("div");
+    divPadre.id = "divPadre";
     divPadre.style.border = "2px solid black" , padding = "8px", margin = "8px"; 
     document.body.appendChild(divPadre);
     for(let i = 0; i < numHijos; i++)
@@ -21,6 +22,7 @@ function divDinamicos()
     //nieto sera de color azul y sera especificado por el usuario
     let divNieto = document.createElement("div");
     divNieto.style.border = "2px solid blue",padding = "8px", margin = "8px";
+    divNieto.id = "divNieto";
     let promtResnie = prompt("Cuantos nietos quieres dibujar?");
     let numNietos = parseInt(promtResnie);
     let hijos = divPadre.children;
@@ -29,7 +31,7 @@ function divDinamicos()
     {
         for (let j = 0; j < numNietos; j++) 
         {
-            let nuevoDivNieto = divNieto.cloneNode(true);
+            let nuevoDivNieto = divNieto.id;
             hijos[i].appendChild(nuevoDivNieto);
         }
     }
