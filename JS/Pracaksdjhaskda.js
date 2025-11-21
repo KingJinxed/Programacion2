@@ -1,81 +1,36 @@
-function formNuevoRegistro() {
+// ...existing code...
+function divDinamicos()
+{
+    const divPadre = document.createElement("div");
+    divPadre.style.border = "2px solid black";
+    divPadre.style.padding = "8px";
+    divPadre.style.margin = "8px";
+    document.body.appendChild(divPadre);
 
-    let registroUsuarios = []; 
-    let correosGerencial = [];
-    let correosPersonal = [];
-    let correosAdmin = [];
+    const promtReshi = parseInt(prompt("¿Cuántos hijos quieres dibujar?"), 10) || 0;
+    const promtResnie = parseInt(prompt("¿Cuántos nietos quieres dibujar por hijo?"), 10) || 0;
 
-    while (true) {
+    const textoHijos = prompt("¿Qué texto quieres en los hijos?") || "";
+    const textoNietos = prompt("¿Qué texto quieres en los nietos?") || "";
 
-        let nombre = document.getElementById("nombre").value;
-        let usuario = document.getElementById("usuario").value;
-        let correo = document.getElementById("correo").value;
-        let contra = document.getElementById("contra").value;
-        let tipo = document.getElementById("tipoCuenta").value;
+    for (let i = 0; i < promtReshi; i++) 
+    {
+        const divHijo = document.createElement("div");
+        divHijo.style.border = "1px solid red";
+        divHijo.style.margin = "6px";
+        divHijo.style.padding = "6px";
+        divHijo.innerText = textoHijos;
+        divPadre.appendChild(divHijo);
 
-        // VALIDACIONES
-        if (nombre.length === 0 || usuario.length === 0 || correo.length === 0 || contra.length === 0 || tipo.length === 0) {
-            alert("Ningún campo puede estar vacío");
-            return;
-        }
-
-        if (contra.length < 8) {
-            alert("La contraseña debe tener al menos 8 caracteres");
-            return;
-        }
-
-        // Tipos válidos separados con split
-        let tiposValidos = "Gerencial,Personal,Administrador".split(",");
-        if (!tiposValidos.includes(tipo)) {
-            alert("Tipo de cuenta inválido");
-            return;
-        }
-
-        // VALIDAR correo único por tipo
-        if (tipo === "Gerencial") {
-            if (correosGerencial.includes(correo)) {
-                alert("Ese correo YA existe en cuentas Gerenciales");
-                return;
-            }
-            correosGerencial.push(correo);
-
-            // Regla especial: Gerencial también es Administrador
-            if (!correosAdmin.includes(correo)) {
-                correosAdmin.push(correo);
-            }
-
-        } else if (tipo === "Personal") {
-            if (correosPersonal.includes(correo)) {
-                alert("Ese correo YA existe en cuentas Personales");
-                return;
-            }
-            correosPersonal.push(correo);
-
-        } else if (tipo === "Administrador") {
-            if (correosAdmin.includes(correo)) {
-                alert("Ese correo YA existe en cuentas Administrador");
-                return;
-            }
-            correosAdmin.push(correo);
-        }
-
-        // Guardar el registro
-        registroUsuarios.push({
-            nombre: nombre,
-            usuario: usuario,
-            correo: correo,
-            contra: contra,
-            tipo: tipo
-        });
-
-        let continuar = prompt("Escribe 'Fin' para terminar, o cualquier cosa para registrar otro");
-        if (continuar === "Fin") {
-            break;
+        for (let j = 0; j < promtResnie; j++) 
+        {
+            const divNieto = document.createElement("div");
+            divNieto.style.border = "1px solid blue";
+            divNieto.style.margin = "4px";
+            divNieto.style.padding = "4px";
+            divNieto.innerText = textoNietos;
+            divHijo.appendChild(divNieto);
         }
     }
-
-
-    // MOSTRAR TODOS LOS NOMBRES REGISTRADOS
-    let nombres = registroUsuarios.map(x => x.nombre).join(", ");
-    alert("Registros completados:\n" + nombres);
 }
+// ...existing code...
