@@ -1,16 +1,24 @@
+let contenedorLista = null;
+
 function listaDinamica()
 {
-    var nueDiv = document.createElement("Div")
-    var nueConte = document.textContent("")
-    nueDiv.appendChild(nueConte)
-
+    if (!contenedorLista) 
+    {
+        contenedorLista = document.createElement("div");
+        contenedorLista.id = "dynamicList";
+        document.body.appendChild(contenedorLista);
+    }
 }
 
-function agregarNuevoItemColor()
+function agregarNuevoItemColor(color)
 {
-    var nueBoton = document.createElement("button")
-    var nueTexto = document.createElement("p")
-    const nombre = document.getElementsByName("nombre");
-    //la funcion debe recicibir como parametro el nomnre de uin color, ingresado por el usuario a traves del campo de texo creado
-    
+    listaDinamica();
+
+    let nuevoItem = document.createElement("p");
+
+    const campo = document.getElementsByName("nombre")[0];
+    nuevoItem.textContent = campo.value;
+    nuevoItem.style.color = color;
+
+    contenedorLista.appendChild(nuevoItem);
 }
