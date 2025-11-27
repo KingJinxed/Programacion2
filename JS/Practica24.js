@@ -12,5 +12,4 @@ function cambiarimagen()
     {
         contador = 0;
     }
-
 }

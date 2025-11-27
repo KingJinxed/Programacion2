@@ -1,25 +1,40 @@
-    //cuando el usuario presiona una tecla se registra inmediatamente y obtiene el codigo y nombre de la tecla hacer una lista de las "teclas presionadas" 
-    // y manetenerla actualizada en pantalla con cada teclada presionada
-    let teclasPresionasdas = [];  
-    function inciar()
+let teclasPresionadas = [];  
+
+function iniciar()
+{
+    document.addEventListener("keydown", presionarTecla);
+    alert("Presiona cualquier tecla.");
+}
+
+function presionarTecla(event)
+{
+    let codigoTecla = event.keyCode;
+    let nombreTecla = event.key;
+
+    // Registrar tecla en el arreglo
+    teclasPresionadas.push({ nombre: nombreTecla, codigo: codigoTecla });
+
+    // Actualizar la lista en pantalla
+    actualizarLista();
+}
+
+function actualizarLista()
+{
+    let resultado = document.getElementById("listaTeclas");
+
+    // Limpiar lista
+    resultado.innerHTML = "";
+
+    for (let i = 0; i < teclasPresionadas.length; i++)
     {
-        document.addEventListener("keydown", presionarTecla);
-        alert("Presiona cualquier tecla.");
+        let nuevoElemento = document.createElement("li");
+        let texto = document.createTextNode("Tecla: " + teclasPresionadas[i].nombre + " | Código: " + teclasPresionadas[i].codigo
+        );
+
+        nuevoElemento.appendChild(texto);
+        resultado.appendChild(nuevoElemento);
     }
-    
-    function presionarTecla(event)
-    {
-        let codigoTecla = event.keyCode;
-        let nombreTecla = event.key;
+}
 
-        nuevoElemento.textContent = "Tecla: " + nombreTecla + "  Código: " + codigoTecla;
-        alert("Tecla presionada: " + nombreTecla + "Código de la tecla: " + codigoTecla);
-        teclasPresionasdas.push({ nombre: nombreTecla, codigo: codigoTecla });
-
-        let resultado = document.getElementById("listaTeclas")
-        resultado.textContent = teclasPresionasdas;
-
-
-    }
-        let boton = document.getElementById("btnMostrar")
-        boton.addEventListener("keyDown", inciar,false);
+let boton = document.getElementById("btnMostrar");
+boton.addEventListener("click", iniciar, false);
